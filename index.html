@@ -78,9 +78,13 @@
      var today = new Date();
      document.getElementById("current-date").innerHTML = (today.getMonth()+1)+'-'+today.getDate()+'-'+today.getFullYear();
      
+     if(today.getMinutes() < 10){
+        document.getElementById("current-time").innerHTML = today.getHours() + ':0' + today.getMinutes();
+} else {
+    document.getElementById("current-time").innerHTML = today.getHours() + ":" + today.getMinutes();
+}
+     
     
-     document.getElementById("current-time").innerHTML = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-
 </script>
 
 
