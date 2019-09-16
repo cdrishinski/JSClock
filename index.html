@@ -19,11 +19,11 @@
 
 
    <div id="img-div">
-       <img src="https://images.unsplash.com/photo-1507864676385-e69c0ca53dbd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60">    
+       <img id="goofy-image" src="https://images.unsplash.com/photo-1507864676385-e69c0ca53dbd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60">    
    </div>
 
    <h4>Set wake up time:</h4>
-   <select>
+   <select id="wake-time">
     <option value="12">12</option>
     <option value="1">1</option>
     <option value="2">2</option>
@@ -36,7 +36,6 @@
     <option value="9">9</option>
     <option value="10">10</option>
     <option value="11">11</option>
-    <option value="12"></option>
   </select>
    <h4>Set lunch time:</h4>
    <select>
@@ -71,7 +70,7 @@
     <option value="12">12</option>
   </select>
 
-  <input id="button" type="button" value="Lets have some fun">
+  <input id="button" type="button" value="Lets have some fun" onclick="wakeTime()">
 
   <script>
 
@@ -84,7 +83,13 @@
     document.getElementById("current-time").innerHTML = today.getHours() + ":" + today.getMinutes();
 }
      
-    
+    function wakeTime() {
+        if(document.getElementById("goofy-image").src == "https://images.unsplash.com/photo-1507864676385-e69c0ca53dbd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"){
+        document.getElementById("goofy-image").src = "https://images.unsplash.com/photo-1533662958083-61eb6094138c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60";
+         } else {
+            document.getElementById("goofy-image").src = "https://images.unsplash.com/photo-1507864676385-e69c0ca53dbd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+         }
+        }
 </script>
 
 
