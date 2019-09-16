@@ -11,11 +11,12 @@
    <h1>ClarkClock</h1>
 
    <h2>Que Hora Es?</h2>
-   <div id="current-date">sadfsadfsdfsdfsdf</div>
+      <!-- SET TIME HERE -->
+   <div id="current-date"></div>
    <div id="current-time"></div>
 
 
-   <!-- SET TIME HERE -->
+
 
    <div id="img-div">
        <img src="https://images.unsplash.com/photo-1507864676385-e69c0ca53dbd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60">    
@@ -75,7 +76,11 @@
   <script>
 
      var today = new Date();
-     document.getElementById("current-date").innerHTML = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate() + today.getHours() + ":" + today.getMinutes();;
+     document.getElementById("current-date").innerHTML = (today.getMonth()+1)+'-'+today.getDate()+'-'+today.getFullYear();
+     
+    
+     document.getElementById("current-time").innerHTML = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
 </script>
 
 
