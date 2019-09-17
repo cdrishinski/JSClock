@@ -1,3 +1,5 @@
+<!-- need good fonts, more images, image changes on selecting new times, autoupdating time at top of screen -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +26,7 @@
    </div>
 
    <h4>Set wake up time:</h4>
-   <select id="wake-time">
+   <select id="wake-time" onclick="partyTimeImg(); partyTimeText()">
     <option value="12">12</option>
     <option value="1">1</option>
     <option value="2">2</option>
@@ -39,7 +41,7 @@
     <option value="11">11</option>
   </select>
    <h4>Set lunch time:</h4>
-   <select>
+   <select onclick="partyTimeImg(); partyTimeText()">
     <option value="12">12</option>
     <option value="1">1</option>
     <option value="2">2</option>
@@ -55,7 +57,7 @@
     <option value="12"></option>
   </select>
    <h4>Set bed time:</h4>
-   <select>
+   <select onclick="partyTimeImg(); partyTimeText()">
     <option value="12">12</option>
     <option value="1">1</option>
     <option value="2">2</option>
@@ -92,7 +94,6 @@
          }
         }
     function partyTimeText() {
-
 
         if(document.getElementById("img-text").innerHTML == "Creepy Dude"){
             document.getElementById("img-text").innerHTML = "Ahhhhhh";

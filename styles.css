@@ -4,14 +4,16 @@
 }
 
 img {
-    width: 75%;
+    width: 60%;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border: 8px black solid;
 }
 
 #img-div {
     margin: auto;
+    
 }
 
 #img-text {
@@ -24,7 +26,11 @@ img {
 }
 
 #button {
+    margin-top: 5%;
+    color: firebrick;
     margin-left: auto;
     margin-right: auto;
     display: block;
+    background-color: aqua;
+    cursor: pointer;
 }
