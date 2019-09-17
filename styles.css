@@ -12,6 +12,13 @@ img {
 #img-div {
     margin: auto;
 }
+.img-text {
+    color: white;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 #button {
     margin-left: auto;
