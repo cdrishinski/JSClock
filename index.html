@@ -87,9 +87,13 @@
 
     if(today.getMinutes() < 10){
     document.getElementById("current-time").innerHTML = today.getHours() + ':0' + today.getMinutes() + ":" + today.getSeconds();
-    } else if (today.getSeconds() < 10){
-        document.getElementById("current-time").innerHTML = today.getHours() + today.getMinutes() + ":0" + today.getSeconds();
-    } else {document.getElementById("current-time").innerHTML = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    } 
+    //ERROR SOMEWHERE IN THE BELOW ELSE IF STATEMENT
+
+    //  else if (today.getSeconds() < 10){
+    //     document.getElementById("current-time").innerHTML = today.getHours() + today.getMinutes() + ":0" + today.getSeconds();
+    // } 
+    else {document.getElementById("current-time").innerHTML = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
      }})
     
      
