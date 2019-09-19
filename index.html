@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ClarkClock</title>
+    <link href="https://fonts.googleapis.com/css?family=Marck+Script|Monoton|Orbitron&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -79,20 +80,18 @@
   <script>
 
 
-      setInterval(function () {
+      setInterval(() => {
      var today = new Date();
 
      document.getElementById("current-date").innerHTML = (today.getMonth()+1)+'-'+today.getDate()+'-'+today.getFullYear();
-     
-     if(today.getMinutes() < 10){
-        document.getElementById("current-time").innerHTML = today.getHours() + ':0' + today.getMinutes() + ":" + today.getSeconds();
-    } 
-    if (today.getSeconds() < 10){
+
+    if(today.getMinutes() < 10){
+    document.getElementById("current-time").innerHTML = today.getHours() + ':0' + today.getMinutes() + ":" + today.getSeconds();
+    } else if (today.getSeconds() < 10){
         document.getElementById("current-time").innerHTML = today.getHours() + today.getMinutes() + ":0" + today.getSeconds();
-    } else {
-    document.getElementById("current-time").innerHTML = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-}
-      })
+    } else {document.getElementById("current-time").innerHTML = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+     }})
+    
      
     function partyTimeImg() {
         if(document.getElementById("goofy-image").src == "https://images.unsplash.com/photo-1507864676385-e69c0ca53dbd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"){
