@@ -9,10 +9,10 @@ h1 {
 h2 {
     font-family: 'Monoton', cursive;
 }
-/* #current-date, #current-time {
+#current-date, #current-time {
     font-size: 300%;
     font-family: 'Marck Script', cursive;
-} */
+}
 
 img {
     width: 60%;

@@ -82,35 +82,51 @@
 
       setInterval(() => {
      var today = new Date();
+     var hours = today.getHours();
+     var minutes = today.getMinutes();
+     var seconds = today.getSeconds();
+
 
      document.getElementById("current-date").innerHTML = (today.getMonth()+1)+'-'+today.getDate()+'-'+today.getFullYear();
 
-    if(today.getMinutes() < 10){
-    document.getElementById("current-time").innerHTML = today.getHours() + ':0' + today.getMinutes() + ":" + today.getSeconds();
-    } 
-    //ERROR SOMEWHERE IN THE BELOW ELSE IF STATEMENT
-
-    //  else if (today.getSeconds() < 10){
-    //     document.getElementById("current-time").innerHTML = today.getHours() + today.getMinutes() + ":0" + today.getSeconds();
-    // } 
-    else {document.getElementById("current-time").innerHTML = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-     }})
-    
-     
-    function partyTimeImg() {
-        if(document.getElementById("goofy-image").src == "https://images.unsplash.com/photo-1507864676385-e69c0ca53dbd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"){
-        document.getElementById("goofy-image").src = "https://images.unsplash.com/photo-1533662958083-61eb6094138c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60";
-         } else {
-            document.getElementById("goofy-image").src = "https://images.unsplash.com/photo-1507864676385-e69c0ca53dbd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
-         }
+        if (hours > 12) {
+            hours = hours - 12;
         }
+        if (minutes < 10) {
+            minutes = "0" + minutes;
+        }
+        if (seconds < 10) {
+            seconds = "0" + seconds;
+        }
+ 
+        document.getElementById("current-time").innerHTML = hours + ':' + minutes + ":" + seconds;
+
+      }
+      )
+
+    var phraseArr = [
+        "Good by Mr. Spalding",
+        "It's a screw ball",
+        "You are beautiful",
+        "this is random",
+        "Ahhhhhhh"
+    ]
+     var imgArr = [
+         "https://images.unsplash.com/photo-1465857862841-737f24ba8ba8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60","https://images.unsplash.com/photo-1533808305890-c3c37a803ed3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60", "https://images.unsplash.com/photo-1518108621213-2be030acb267?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60", "https://images.unsplash.com/photo-1520634340880-1156207b5994?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60", "https://images.unsplash.com/photo-1507808973436-a4ed7b5e87c9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+         "https://images.unsplash.com/photo-1507864676385-e69c0ca53dbd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60", "https://images.unsplash.com/photo-1533662958083-61eb6094138c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+     ]
+
+// generates random image
+    function partyTimeImg() {
+ 
+        document.getElementById("goofy-image").src = imgArr[Math.floor(Math.random()*imgArr.length)];
+      
+         }
+
+// generates random phrase
     function partyTimeText() {
 
-        if(document.getElementById("img-text").innerHTML == "Creepy Dude"){
-            document.getElementById("img-text").innerHTML = "Ahhhhhh";
-        } else {
-            document.getElementById("img-text").innerHTML = "Creepy Dude";
-        }
+     document.getElementById("img-text").innerHTML = phraseArr[Math.floor(Math.random()*phraseArr.length)];
     }
 </script>
 
